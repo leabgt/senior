@@ -1,0 +1,9 @@
+<div class="container">
+  <div>
+    <% current_user.repertoire.contacts.each do |contact|%>
+      <p> <%= contact.user.first_name %>
+      <%= contact.user.last_name %></p>
+      <%#= contact.video_link %>
+    <% end %>
+  </div>
+</div>
