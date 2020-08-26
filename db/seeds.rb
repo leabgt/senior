@@ -22,14 +22,16 @@ ludo = User.create(email: "ludo@gmail.com", first_name: "Ludo", last_name: "Wago
 ludo.save!
 
 repertoire_Lea = Repertoire.create(user: lea)
-# repertoire_Adrien = Repertoire.create(user_id: "Adrien")
-# repertoire_Anais = Repertoire.create(user_id: "Anais")
-# repertoire_Ludo = Repertoire.create(user_id: "Ludo")
+repertoire_Adrien = Repertoire.create(user: adrien)
+# repertoire_Anais = Repertoire.create(user_id: anais)
+# repertoire_Ludo = Repertoire.create(user_id: ludo)
 
 contact_Lea = Contact.create(repertoire: repertoire_Lea, user: adrien, video_link: "https://senior.daily.co/Adrien")
 contact_Lea2 = Contact.create(repertoire: repertoire_Lea, user: anais, video_link: "https://senior.daily.co/Anais")
 contact_Lea3 = Contact.create(repertoire: repertoire_Lea, user: ludo, video_link: "https://senior.daily.co/Ludo")
 
-
+contact_Adrien = Contact.create(repertoire: repertoire_Adrien, user: lea, video_link: "https://senior.daily.co/Lea")
+contact_Adrien2 = Contact.create(repertoire: repertoire_Adrien, user: anais, video_link: "https://senior.daily.co/Anais")
+contact_Adrien3 = Contact.create(repertoire: repertoire_Adrien, user: ludo, video_link: "https://senior.daily.co/Ludo")
 
 puts "created"
