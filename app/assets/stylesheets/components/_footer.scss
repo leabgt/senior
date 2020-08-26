@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  height: 30px;
+  background-color: $my-pink;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px 50px;
+ }
+
+.footer-links {
+  display: flex;
+  text-decoration: none;
+}
+
+.footer-links a {
+  color: $light-gray;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+a:hover {
+  opacity: 0.5;
+  }
+
+.footer-copyright {
+    font-size: 8px;
+    padding: 10px;
+    color: white;
+}

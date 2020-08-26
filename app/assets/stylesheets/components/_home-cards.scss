@@ -1,0 +1,32 @@
+
+.row {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+
+.home-cards {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+  border-style: solid;
+  background: white;
+  border: gray;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 10px;
+  p {
+    font-weight: bold;
+    font-size: 20px;
+    }
+  .service-card-icon {
+    width: 60px;
+    }
+  }
+
+

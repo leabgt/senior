@@ -1,0 +1,30 @@
+<!-- API KEY = 966025264c5a9e63e67b677f531cfa4ef52a9bb32e1389d92773999c70e90241 -->
+
+
+
+<!-- code pour une fenetre de base -->
+
+
+<!-- <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+<script>
+  callFrame = window.DailyIframe.createFrame();
+  callFrame.join({ url: 'https://senior.daily.co/hello-daily' });
+</script> -->
+
+
+ <!-- code pour un full screen -->
+<div>
+  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+  <script>
+  callFrame = window.DailyIframe.createFrame({
+    showLeaveButton: true,
+    iframeStyle: {
+      position: 'fixed',
+      width: '100%',
+      height: '100%'
+    }
+  });
+  callFrame.join({ url: "<%= @contact.video_link %>"})
+  </script>
+
+</div>

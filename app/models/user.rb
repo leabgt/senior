@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :trips
   has_many :contacts
+  has_one :repertoire
 end
