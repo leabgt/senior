@@ -26,9 +26,9 @@ repertoire_Lea = Repertoire.create(user: lea)
 # repertoire_Anais = Repertoire.create(user_id: "Anais")
 # repertoire_Ludo = Repertoire.create(user_id: "Ludo")
 
-contact_Lea = Contact.create(repertoire: repertoire_Lea, user: adrien)
-contact_Lea2 = Contact.create(repertoire: repertoire_Lea, user: anais)
-contact_Lea3 = Contact.create(repertoire: repertoire_Lea, user: ludo)
+contact_Lea = Contact.create(repertoire: repertoire_Lea, user: adrien, video_link: "https://senior.daily.co/Adrien")
+contact_Lea2 = Contact.create(repertoire: repertoire_Lea, user: anais, video_link: "https://senior.daily.co/Anais")
+contact_Lea3 = Contact.create(repertoire: repertoire_Lea, user: ludo, video_link: "https://senior.daily.co/Ludo")
 
 
 

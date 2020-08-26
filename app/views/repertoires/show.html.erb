@@ -2,8 +2,7 @@
   <div>
     <% current_user.repertoire.contacts.each do |contact|%>
       <p> <%= contact.user.first_name %>
-      <%= contact.user.last_name %></p>
-      <%#= contact.video_link %>
+      <%=link_to  contact.video_link, repertoire_contact_path(contact) %></p>
     <% end %>
   </div>
 </div>
