@@ -1,0 +1,32 @@
+.banner-home-content {
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $my-purple;
+  background-size: cover;
+  background-position: center;
+}
+
+.block-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .text-left {
+    h1 {
+      color: white;
+    }
+    p {
+      color: white;
+      opacity: .8;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .simple-form {
+    }
+  }
+}
+
+.logo-banner {
+    height: 350px;
+}

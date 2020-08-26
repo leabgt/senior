@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Trip.destroy_all
+Contact.destroy_all
+Repertoire.destroy_all
 User.destroy_all
 puts "destroy all"
 
@@ -18,5 +20,16 @@ anais = User.create(email: "anais@gmail.com", first_name: "Anais", last_name: "W
 anais.save!
 ludo = User.create(email: "ludo@gmail.com", first_name: "Ludo", last_name: "Wagon", address: "Bordeaux", phone_number: "0113856784", password: "azerty")
 ludo.save!
+
+repertoire_Lea = Repertoire.create(user: lea)
+# repertoire_Adrien = Repertoire.create(user_id: "Adrien")
+# repertoire_Anais = Repertoire.create(user_id: "Anais")
+# repertoire_Ludo = Repertoire.create(user_id: "Ludo")
+
+contact_Lea = Contact.create(repertoire: repertoire_Lea, user: adrien, video_link: "https://senior.daily.co/Adrien")
+contact_Lea2 = Contact.create(repertoire: repertoire_Lea, user: anais, video_link: "https://senior.daily.co/Anais")
+contact_Lea3 = Contact.create(repertoire: repertoire_Lea, user: ludo, video_link: "https://senior.daily.co/Ludo")
+
+
 
 puts "created"

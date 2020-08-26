@@ -1,0 +1,16 @@
+.home-block-cards {
+height: 100vh;
+display: flex;
+justify-content: space-around;
+align-items: center;
+  .home-cards {
+  height: 120px;
+  width: 220px;
+  border-style: solid;
+  border: gray;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+}
+
+
