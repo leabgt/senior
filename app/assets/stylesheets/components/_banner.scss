@@ -1,11 +1,16 @@
+
+.banner-home {
+  padding-top: 50px;
+}
+
 .banner-home-content {
-  height: 400px;
+  height: 350px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background: $my-green;
   background-size: cover;
-  background-position: center;
+  background-position: center 100%;
 }
 
 .block-left {
@@ -28,5 +33,5 @@
 }
 
 .logo-banner {
-    height: 350px;
+    height: 300px;
 }
