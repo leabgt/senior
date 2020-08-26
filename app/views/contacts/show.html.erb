@@ -1,22 +1,9 @@
 <!-- API KEY = 966025264c5a9e63e67b677f531cfa4ef52a9bb32e1389d92773999c70e90241 -->
 
 
-const request = require("request");
-
-var options = { method: 'GET',
-  url: 'https://qa-ks.pluot.blue/api/v1/rooms',
-  headers: { authorization: `Bearer ${YOUR_API_KEY}` } };
-
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
-
-  console.log(body);
-});
-
-
 
 <!-- code pour une fenetre de base -->
-<div>
+
 
 <!-- <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
 <script>
@@ -26,18 +13,18 @@ request(options, function (error, response, body) {
 
 
  <!-- code pour un full screen -->
-
- <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
-<script>
-callFrame = window.DailyIframe.createFrame({
-  showLeaveButton: true,
-  iframeStyle: {
-    position: 'fixed',
-    width: '100%',
-    height: '100%'
-  }
-});
-callFrame.join({ url: 'https://senior.daily.co/hello' })
-</script>
+<div>
+  <script crossorigin src="https://unpkg.com/@daily-co/daily-js"></script>
+  <script>
+  callFrame = window.DailyIframe.createFrame({
+    showLeaveButton: true,
+    iframeStyle: {
+      position: 'fixed',
+      width: '100%',
+      height: '100%'
+    }
+  });
+  callFrame.join({ url: "<%= @contact.video_link %>"})
+  </script>
 
 </div>
