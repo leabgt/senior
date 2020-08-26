@@ -20,11 +20,42 @@
   </div>
 </div>
 
-<div class = "home-block-cards d-flex">
-  <div class= "home-cards"></div>
-  <div class= "home-cards"></div>
-  <div class= "home-cards"></div>
-  <div class= "home-cards"></div>
-  <div class= "home-cards"></div>
-  <div class= "home-cards"></div>
+ <div class= "container">
+   <div class="row justify-content-center">
+      <%= link_to repertoire_path(current_user), class: "home-cards col-sm-4" do %>
+        <%= cl_image_tag "call.png", class: "service-card-icon"%>
+        <p>Call</p>
+      <% end %>
+     <div class="home-cards col-sm-4">
+        <%= cl_image_tag "taxi.png", class: "service-card-icon"%>
+        <p>Taxi</p>
+     </div>
+     <div class="home-cards col-sm-4">
+        <%= cl_image_tag "food.png", class: "service-card-icon"%>
+        <p>Food</p>
+     </div>
+     <div class="home-cards col-sm-4">
+        <%= cl_image_tag "doctor.png", class: "service-card-icon"%>
+        <p>Doctor</p>
+     </div>
+     <div class="home-cards col-sm-4">
+        <%= cl_image_tag "cleaning.png", class: "service-card-icon"%>
+        <p>Cleaning</p>
+     </div>
+     <div class="home-cards col-sm-4">
+        <%= cl_image_tag "meet.png", class: "service-card-icon"%>
+        <p>Meet</p>
+     </div>
+   </div>
+ </div>
+
+<div class="footer">
+  <div class="footer-links"; style= "float:left">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright"; style= "float:right">
+    © <%= Date.today.year %> My App.<i class="fas fa-heart"></i>Senior
+  </div>
 </div>
