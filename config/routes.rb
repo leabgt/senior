@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :repertoires, only: [:show] do
     resources :contacts, only: [:show]
   end
+
   resources :trips, only: [:new, :create, :edit, :update, :show]
   resources :questions, only: [:index, :show]
 
