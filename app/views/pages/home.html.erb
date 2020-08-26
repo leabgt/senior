@@ -21,15 +21,16 @@
 </div>
 
  <div class= "container">
-   <div class="row justify-content-center">
+   <div class="row home justify-content-center">
+
       <%= link_to repertoire_path(@repertoire), class: "home-cards col-sm-4" do %>
         <%= cl_image_tag "call.png", class: "service-card-icon"%>
         <p>Call</p>
       <% end %>
-     <div class="home-cards col-sm-4">
+      <%= link_to new_trip_path, class: "home-cards col-sm-4" do %>
         <%= cl_image_tag "taxi.png", class: "service-card-icon"%>
         <p>Taxi</p>
-     </div>
+      <% end %>
      <div class="home-cards col-sm-4">
         <%= cl_image_tag "food.png", class: "service-card-icon"%>
         <p>Food</p>

@@ -1,8 +1,1 @@
-<div class="container">
-  <div>
-    <% current_user.repertoire.contacts.each do |contact|%>
-      <p> <%= contact.user.first_name %>
-      <%=link_to  contact.video_link, repertoire_contact_path(contact) %></p>
-    <% end %>
-  </div>
-</div>
+
