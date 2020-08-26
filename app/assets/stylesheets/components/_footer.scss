@@ -1,23 +1,32 @@
 .footer {
-  background: #F4F4F4;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  justify-content: space-evenly;
+  position: fixed;
+  height: 30px;
+  background-color: $my-pink;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-}
+ }
+
 .footer-links {
   display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
   text-decoration: none;
-  font-size: 24px;
+}
+
+.footer-links a {
+  color: $light-gray;
+  font-size: 20px;
   padding: 0px 10px;
 }
-.footer-links a:hover {
-  opacity: 1;
+
+a:hover {
+  opacity: 0.5;
+  }
+
+.footer-copyright {
+    font-size: 8px;
+    padding: 10px;
+    color: white;
 }
