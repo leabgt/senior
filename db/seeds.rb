@@ -23,8 +23,8 @@ ludo.save!
 
 repertoire_Lea = Repertoire.create(user: lea)
 repertoire_Adrien = Repertoire.create(user: adrien)
-# repertoire_Anais = Repertoire.create(user_id: anais)
-# repertoire_Ludo = Repertoire.create(user_id: ludo)
+repertoire_Anais = Repertoire.create(user: anais)
+repertoire_Ludo = Repertoire.create(user: ludo)
 
 contact_Lea = Contact.create(repertoire: repertoire_Lea, user: adrien, video_link: "https://senior.daily.co/Adrien")
 contact_Lea2 = Contact.create(repertoire: repertoire_Lea, user: anais, video_link: "https://senior.daily.co/Anais")
@@ -33,5 +33,13 @@ contact_Lea3 = Contact.create(repertoire: repertoire_Lea, user: ludo, video_link
 contact_Adrien = Contact.create(repertoire: repertoire_Adrien, user: lea, video_link: "https://senior.daily.co/Lea")
 contact_Adrien2 = Contact.create(repertoire: repertoire_Adrien, user: anais, video_link: "https://senior.daily.co/Anais")
 contact_Adrien3 = Contact.create(repertoire: repertoire_Adrien, user: ludo, video_link: "https://senior.daily.co/Ludo")
+
+contact_Anais = Contact.create(repertoire: repertoire_Anais, user: lea, video_link: "https://senior.daily.co/Lea")
+contact_Anais2 = Contact.create(repertoire: repertoire_Anais, user: adrien, video_link: "https://senior.daily.co/Adrien")
+contact_Anais3 = Contact.create(repertoire: repertoire_Anais, user: ludo, video_link: "https://senior.daily.co/Ludo")
+
+contact_Ludo = Contact.create(repertoire: repertoire_Ludo, user: lea, video_link: "https://senior.daily.co/Lea")
+contact_Ludo2 = Contact.create(repertoire: repertoire_Ludo, user: adrien, video_link: "https://senior.daily.co/Adrien")
+contact_Ludo3 = Contact.create(repertoire: repertoire_Ludo, user: anais, video_link: "https://senior.daily.co/Anais")
 
 puts "created"
