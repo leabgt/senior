@@ -1,0 +1,26 @@
+.swal-overlay {
+  background-color: rgba(48,57,96,0.8);
+}
+
+.swal-modal {
+  background-color: $my-green;
+  border: 3px solid white;
+}
+
+.swal-text {
+  background-color: #FEFAE3;
+  padding: 17px;
+  border: 1px solid #F0E1A1;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #61534e;
+  font-size: 32px;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 5px;
+  background-color: $my-purple;
+  font-size: 24px;
+}
