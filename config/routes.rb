@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'question_category/questioncategory'
   devise_for :users
   root to: 'pages#home'
 
@@ -8,5 +9,14 @@ Rails.application.routes.draw do
 
   resources :trips, only: [:new, :create, :edit, :update, :show]
   resources :questions, only: [:index, :show]
+
+  resources :question_category, only: [:index] do
+    collection do
+      get :common
+      get :call
+      get :food
+      get :taxi
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
