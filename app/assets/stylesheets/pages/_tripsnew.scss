@@ -1,9 +1,35 @@
+.taxi-top-block {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  justify-content: center;
+}
+.newtaxi-gif {
+  width:150px;
+  height: 150px;
+  }
+  h2 {
+  font-size: 32px;
+  text-align: center;
+  }
+
 .trips-form {
   background-color: $my-green;
   width: 500px;
   padding: 50px;
   box-shadow: 2px 2px 2px gray;
-  margin-top: 70px;
+  margin-top: 20px;
+  margin-bottom: 150px;
+  border-radius: 10px;
+}
+
+.trips-form-details {
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.trips-form-time {
+  border-radius: 10px;
 }
 
 .btn-trip-form {
