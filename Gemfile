@@ -42,6 +42,7 @@ gem 'cloudinary', '~> 1.12.0'
 
 gem 'geocoder'
 
+gem 'font-ionicons-rails'
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
