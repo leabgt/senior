@@ -16,12 +16,9 @@ const initVideoCall = () => {
   xhr.send(data);
 }
 
-// export { initVideoCall }
-
-
 // const data = JSON.stringify({
 //   "properties": {
-//     "meeting_join_hook": "\"<%= @contact.video_link %>\""
+//     "redirect_on_meeting_exit": "http://www.vie-de-senior.com/"
 //   }
 // });
 
