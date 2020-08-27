@@ -1,0 +1,25 @@
+.bannercall {
+  background-size: cover;
+  padding: 0 auto;
+  border-top: 3px solid rgb(65, 2, 130);
+  border-bottom: 3px solid rgb(65, 2, 130);
+}
+
+.bannercall h1 {
+  margin: 0;
+  color: rgb(65, 2, 130);
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bannercall p {
+  font-size: 20px;
+  color: rgb(65, 2, 130);
+  opacity: .7;
+  text-align: center;
+}
+
+.bannerbackground {
+  background-color: rgb(255, 255, 255);
+}
