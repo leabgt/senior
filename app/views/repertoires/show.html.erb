@@ -16,7 +16,7 @@
           </div>
 
           <div class= "contact-card-icon">
-            <%= link_to repertoire_contact_path(current_user.repertoire, contact) do %>
+            <%= link_to contact.video_link do %>
               <%= cl_image_tag "call.png" %>
             <% end %>
           </div>
