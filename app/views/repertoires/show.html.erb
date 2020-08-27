@@ -1,6 +1,12 @@
 
-<%= cl_image_tag "super-mamie.gif", class: "contact-card-avatar"%>
+
+
   <div class="container repertoire-show">
+    <div class="repertoire-top-block">
+    <%= cl_image_tag "super-mamie.gif", class: "repertoire-gif"%>
+    <h2>Your contacts</h2>
+    <%= cl_image_tag "super-papy.gif", class: "repertoire-gif"%>
+    </div>
     <% current_user.repertoire.contacts.each do |contact|%>
       <div class="card-contact">
           <div class="contact-infos">

@@ -10,8 +10,13 @@
 @import "flatpickr/dist/flatpickr";
 @import "flatpickr/dist/themes/material_green";
 
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pages/question"
+@import "pages/question";
+@import "pages/common";
+@import "pages/call";
+@import "pages/food";
+@import "pages/taxi";
 
