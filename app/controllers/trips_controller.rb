@@ -8,8 +8,9 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
+    @trip.user = current_user
     if @trip.save!
-      redirect_to edit_trip(@trip)
+      redirect_to edit_trip_path(@trip)
     else
       render :new
     end

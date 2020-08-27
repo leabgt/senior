@@ -26,24 +26,12 @@
   </div>
 </div>
 
-<!-- <script>
-  // TODO: Write your JS code in here
-const form = document.querySelector('form');
-const input = document.querySelector('#result');
-const coordinates = document.querySelector('#coordinates');
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  fetchMap(input.value);
-});
-
+<script>
 const fetchMap = (query) => {
   fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=pk.eyJ1IjoibGVhLWJndCIsImEiOiJja2RhYWdiZ2MwdXlvMnJvZHM5OGYwNnMyIn0.A9DfL46JiXooTuXPb2MTpQ`)
     .then(response => response.json())
     .then((data) => {
-      const long = data.features[0].geometry.coordinates[0];
-      const lat = data.features[0].geometry.coordinates[1];
-      coordinates.innerHTML = `${long} - ${lat}`;
+      console.log(data)
     });
 };
-</script> -->
+</script>
