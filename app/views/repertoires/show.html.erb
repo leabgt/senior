@@ -7,7 +7,7 @@
         <h2> <%= contact.user.first_name %> </h2>
         <h3>Status</h3>
       </div>
-      <%= link_to repertoire_contact_path(current_user.repertoire, contact) do %>
+      <%= link_to contact.video_link do %>
         <%= cl_image_tag "call.png", class: "contact-card-icon"%>
       <% end %>
     </div>
