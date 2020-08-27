@@ -2,7 +2,7 @@
   <% current_user.repertoire.contacts.each do |contact|%>
   <!-- <div class = "col-xs-12 col-md-6 col-lg-4 d-flex justify-content-center"> -->
     <div class="card-contact">
-      <%= cl_image_tag "queen_elizabeth_II.jpg", class: "contact-card-avatar"%>
+      <%= cl_image_tag contact.user.photo.key, class: "contact-card-avatar"%>
       <div class="contact-infos">
         <h2> <%= contact.user.first_name %> </h2>
         <h3>Status</h3>
