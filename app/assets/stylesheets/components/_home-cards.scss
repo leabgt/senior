@@ -1,7 +1,7 @@
 
-.row {
+.home {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 110px;
   padding-left: 180px;
   padding-right: 180px;
 }
@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 120px;
+  height: 110px;
   border-style: solid;
   background: white;
   border: gray;
@@ -25,8 +25,11 @@
     font-size: 20px;
     }
   .service-card-icon {
-    width: 60px;
+    width: 54px;
+    height: 54px;
     }
   }
 
-
+.home-cards:hover {
+      text-decoration: none;
+}

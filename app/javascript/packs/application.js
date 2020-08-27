@@ -37,5 +37,12 @@ document.addEventListener('turbolinks:load', () => {
   initVideoCall();
 });
 
+import { initSweetalert } from '../plugins/init_sweetalert';
+
+initSweetalert('#sweet-alert-demo', {
+  icon: "https://res.cloudinary.com/dyrbktlhi/image/upload/v1598363920/logo.png",
+  text: "Your course is confirmed",
+  button: "OK",
+});
 
 

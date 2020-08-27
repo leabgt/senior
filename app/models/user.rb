@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :trips
   has_many :contacts
   has_one :repertoire
+  has_one_attached :photo
 end
