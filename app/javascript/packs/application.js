@@ -25,7 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 import "../plugins/flatpickr"
-import "../components/minus_answer"
 
 // Internal imports, e.g:
 import { initVideoCall } from '../components/init_videocall'
