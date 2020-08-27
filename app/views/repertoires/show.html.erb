@@ -4,7 +4,7 @@
     <% current_user.repertoire.contacts.each do |contact|%>
       <div class="card-contact">
           <div class="contact-infos">
-            <%= cl_image_tag @contact.user.photo.key, class: "contact-card-avatar"%>
+            <%= cl_image_tag contact.user.photo.key, class: "contact-card-avatar"%>
             <div class="contact-text">
               <h2> <%= contact.user.first_name %> <%=contact.user.last_name %> </h2>
             </div>
