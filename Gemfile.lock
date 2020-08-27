@@ -99,6 +99,7 @@ GEM
     ffi (1.13.1)
     font-awesome-sass (5.13.0)
       sassc (>= 1.11)
+    geocoder (1.6.3)
     font-ionicons-rails (2.0.1.6)
       railties (>= 3.2, < 7.0)
     globalid (0.4.2)
@@ -264,6 +265,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
+  geocoder
   font-ionicons-rails
   jbuilder (~> 2.7)
   listen (~> 3.2)
