@@ -1,16 +1,21 @@
-<div class="container" style="margin-top: 200px">
-  <% current_user.repertoire.contacts.each do |contact|%>
-  <!-- <div class = "col-xs-12 col-md-6 col-lg-4 d-flex justify-content-center"> -->
-    <div class="card-contact">
-      <%= cl_image_tag "queen_elizabeth_II.jpg", class: "contact-card-avatar"%>
-      <div class="contact-infos">
-        <h2> <%= contact.user.first_name %> </h2>
-        <h3>Status</h3>
+
+<%= cl_image_tag "super-mamie.gif", class: "contact-card-avatar"%>
+  <div class="container repertoire-show">
+    <% current_user.repertoire.contacts.each do |contact|%>
+      <div class="card-contact">
+          <div class="contact-infos">
+            <%= cl_image_tag @contact.user.photo.key, class: "contact-card-avatar"%>
+            <div class="contact-text">
+              <h2> <%= contact.user.first_name %> <%=contact.user.last_name %> </h2>
+            </div>
+          </div>
+
+          <div class= "contact-card-icon">
+            <%= link_to repertoire_contact_path(current_user.repertoire, contact) do %>
+              <%= cl_image_tag "call.png" %>
+            <% end %>
+          </div>
       </div>
-      <%= link_to repertoire_contact_path(current_user.repertoire, contact) do %>
-        <%= cl_image_tag "call.png", class: "contact-card-icon"%>
-      <% end %>
-    </div>
-  <!-- </div> -->
-  <% end %>
-</div>
+    <% end %>
+  </div>
+
