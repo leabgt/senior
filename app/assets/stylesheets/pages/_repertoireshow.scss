@@ -1,35 +1,52 @@
+.repertoire-show {
+padding-left: 300px;
+padding-right: 300px;
+margin-top: 130px;
+margin-bottom: 100px;
+}
+
 .card-contact {
-  overflow: hidden;
+  overflow: visible;
   height: 120px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-right: 20px;
 }
+
 
 .contact-card-avatar{
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin-left: -40px;
+  margin-right: 20px;
 }
 
-.contact-infos h2 {
-  font-size: 16px;
+.contact-infos {
+  display: flex;
+  align-items: center;
+}
+
+.contact-text {
+  padding-left: 20px;
+ h2 {
+  font-size: 32px;
   font-weight: bold;
-  margin: 0;
+}
 }
 
 .contact-infos h3 {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-contact .contact-infos {
-  padding: 16px;
 }
 
 .contact-card-icon {
-
+  width: 72px;
+  height: 72px;
 }

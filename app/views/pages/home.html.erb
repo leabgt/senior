@@ -22,7 +22,7 @@
 
  <div class= "container">
    <div class="row home justify-content-center">
-
+      <h2>What do you need today?</h2>
       <%= link_to repertoire_path(@repertoire), class: "home-cards col-sm-4" do %>
         <%= cl_image_tag "call.png", class: "service-card-icon"%>
         <p>Call</p>
@@ -50,13 +50,3 @@
    </div>
  </div>
 
-<div class="footer">
-  <div class="footer-links"; style= "float:left">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-  <div class="footer-copyright"; style= "float:right">
-    © <%= Date.today.year %> My App.<i class="fas fa-heart"></i>Senior
-  </div>
-</div>
