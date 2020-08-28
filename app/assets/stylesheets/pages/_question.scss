@@ -26,7 +26,9 @@
   background-color: rgb(255, 255, 255);
 }
 
-
+a:hover{
+  text-decoration: none;
+}
 .cardfaq {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
