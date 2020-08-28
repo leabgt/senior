@@ -41,7 +41,7 @@ section{
   justify-content: center;
 }
 
-.container{
+.containerfaq{
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
@@ -77,6 +77,10 @@ section{
 
 .accordion-link .fa-minus{
   display: none;
+}
+
+.accordion-link h4:hover {
+  color:#f8b24f;
 }
 
 .answer{

@@ -2,6 +2,7 @@
 .bannerfaq {
   background-size: cover;
   padding: 0 auto;
+  margin-top: 76px;
   border-top: 3px solid rgb(65, 2, 130);
   border-bottom: 3px solid rgb(65, 2, 130);
 }
@@ -25,7 +26,9 @@
   background-color: rgb(255, 255, 255);
 }
 
-
+a:hover{
+  text-decoration: none;
+}
 .cardfaq {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -87,10 +90,11 @@
   text-align: center;
 }
 
-.cardfaq :hover{
+.card-category:hover{
   color:rgb(255, 255, 255);
   background-color:rgb(65, 2, 130);
   font-size: 40px;
+  text-decoration: none;
 }
 
 .faq1 {
@@ -114,5 +118,8 @@
   font-size: 30px;
 }
 
+.cardfaq p:hover{
+  font-size: 40px
+}
 
 
