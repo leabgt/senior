@@ -10,20 +10,8 @@
 
       <div class="trips-form-details">
         <%= f.input :arrival_address, label: 'Where do you want to go?' %>
-
-        <div class="row d-flex justify-content-between trips-form-time">
-          <div class="col-md-6 col-sm-12">
-            <%= f.input :start_at, label: 'Date', as: :string, required: false, input_html: {class: "datepicker"} %>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <%= f.input :timeslot, label: 'Timing' %>
-          </div>
-        </div>
-
-        </div>
-
+      </div>
         <%= f.submit 'Réserver', class: "btn btn-trip-form"%>
-
       </div>
 
     <% end %>
