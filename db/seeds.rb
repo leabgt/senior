@@ -32,7 +32,7 @@ anais.photo.attach(io: file, filename: "queen_elizabeth_II.jpg.jpg", content_typ
 anais.save!
 
 file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598530240/Ludo.jpg")
-ludo = User.create(email: "ludo@gmail.com", first_name: "Ludo", last_name: "Magnol", address: "Bordeaux", phone_number: "0113856784", password: "azerty")
+ludo = User.create(email: "ludo@gmail.com", first_name: "Ludovic", last_name: "Magnol", address: "Bordeaux", phone_number: "0113856784", password: "azerty")
 ludo.photo.attach(io: file, filename: "ludo.jpg", content_type: "image/jpg")
 ludo.save!
 
