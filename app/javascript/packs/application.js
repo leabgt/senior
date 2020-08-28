@@ -45,7 +45,4 @@ initSweetalert('#sweet-alert-demo', {
 });
 
 
-document.addEventListener('turbolinks:load', () => {
-  alert("coucou")
-}
 
