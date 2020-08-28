@@ -1,4 +1,4 @@
-<div class="navbar fixed-top navbar-expand-sm navbar-light navbar-senior">
+<div class="navbar fixed-top navbar-expand-sm navbar-light navbar-senior" id="navbar-home">
   <div class="navbar-brand">
     <%= link_to root_path do %>
       <%= cl_image_tag "logo.png" %>
@@ -16,7 +16,9 @@
       </li>
       <li class="nav-item dropdown">
         <% if user_signed_in? %>
+
         <%= cl_image_tag current_user.photo.key , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
         <% end %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "My profile", "#", class: "dropdown-item" %>
