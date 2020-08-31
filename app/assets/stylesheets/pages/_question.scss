@@ -76,8 +76,8 @@ a:hover{
   margin: 0 auto;
   background-size: cover;
   background-position: center;
-  height: 400px;
-  width: 200px;
+  height: 150px;
+  width: 290px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,9 +86,10 @@ a:hover{
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgb(65, 2, 130);
   text-align: center;
 }
+
 
 .card-category:hover{
   color:rgb(255, 255, 255);
@@ -98,19 +99,34 @@ a:hover{
 }
 
 .faq1 {
-  background-color: #ea9a96;
+  background-color: rgb(255, 255, 255);
 }
 
 .faq2 {
-  background-color: #00bdaa;
+  background-color: rgb(255, 255, 255);
 }
 
 .faq3 {
-  background-color: #f8b24f;
+  background-color: rgb(255, 255, 255);
 }
 
 .faq4 {
-  background-color:#FFC65A;
+  background-color:rgb(255, 255, 255);
+}
+
+.faq5 {
+  background-color:rgb(255, 255, 255);
+  margin-top: 30px;
+}
+
+.faq6 {
+  background-color:rgb(255, 255, 255);
+  margin-top: 30px;
+}
+
+.faq7 {
+  background-color:rgb(255, 255, 255);
+  margin-top: 30px;
 }
 
 

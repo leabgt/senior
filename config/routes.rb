@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_scope :user do
   get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  
+
   root to: 'pages#home'
 
   resources :repertoires, only: [:show] do
@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       get :call
       get :food
       get :taxi
+      get :doctor
+      get :cleaning
+      get :meet
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
