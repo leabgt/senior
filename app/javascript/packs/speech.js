@@ -26971,7 +26971,23 @@ var authorizationToken;
 var SpeechSDK;
 var recognizer;
 
-document.addEventListener("DOMContentLoaded", function () {
+const dispatch = (result) => {
+  const submitBtn = document.querySelector("#speechRecSubmitBtn");
+  const repertoireId = submitBtn.dataset.repertoire_id;
+  const text = result.privText == null ? "" : result.privText.toLowerCase();
+  if (text.includes("taxi")) {
+    submitBtn.setAttribute("href", "/trips/new")
+  } else if (text.includes("call")) {
+    submitBtn.setAttribute("href", `/repertoires/${repertoireId}`)
+  } else {
+    submitBtn.setAttribute("href", "/")
+  };
+}
+
+console.log(`1: ${!!window.SpeechSDK}`)
+
+document.addEventListener("turbolinks:load", function () {
+  console.log(`2: ${!!window.SpeechSDK}`)
   startRecognizeOnceAsyncButton = document.getElementById("startRecognizeOnceAsyncButton");
   subscriptionKey = document.getElementById("subscriptionKey");
   serviceRegion = document.getElementById("serviceRegion");
@@ -27005,6 +27021,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         recognizer.close();
         recognizer = undefined;
+        dispatch(result);
+        const submitBtn = document.querySelector("#speechRecSubmitBtn");
+        submitBtn.click();
       },
       function (err) {
         startRecognizeOnceAsyncButton.disabled = false;
@@ -27029,3 +27048,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+
