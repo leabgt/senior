@@ -23,7 +23,7 @@ Rails.application.routes.draw do
       get :doctor
       get :cleaning
       get :meet
-      get :vocalservice
+      get :speechrecognition
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
