@@ -1,6 +1,7 @@
 .bannercommon {
   background-size: cover;
   padding: 0 auto;
+  margin-top: 76px;
   border-top: 3px solid rgb(65, 2, 130);
   border-bottom: 3px solid rgb(65, 2, 130);
 }
@@ -41,7 +42,7 @@ section{
   justify-content: center;
 }
 
-.container{
+.containerfaq{
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
@@ -77,6 +78,10 @@ section{
 
 .accordion-link .fa-minus{
   display: none;
+}
+
+.accordion-link h4:hover {
+  color:#f8b24f;
 }
 
 .answer{

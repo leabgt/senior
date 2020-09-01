@@ -8,3 +8,29 @@ p {
 font-size: 16px;
 font-color: $gray;
 }
+
+.speechRecognizeContent {
+  position: absolute;
+  top: 322px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.speechRecognizeBtn {
+  background-color: $my-pink;
+  color: $light-gray;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+}
+
+.speechIcon {
+  width: 70px;
+  height: 70px;
+  color: white;
+}
+
+.homepage h2 {
+  margin-top: 100px;
+}

@@ -19,29 +19,60 @@
       </div>
     </div>
   <% end %>
-
-  <div class="card-category faq wrap faq2">
-    <a href="#"></a>
-    <div class= "d-flex flex-column">
-      <p>Call</p>
-      <%= cl_image_tag "call.png" %>
+  <%= link_to call_question_category_index_path do %>
+    <div class="card-category faq wrap faq2">
+      <div class= "d-flex flex-column">
+        <p>Call</p>
+        <%= cl_image_tag "call.png" %>
+      </div>
     </div>
-  </div>
-
-  <div class="card-category faq wrap faq3">
-    <a href="#"></a>
-    <div class= "d-flex flex-column">
-      <p>Food</p>
-      <%= cl_image_tag "food.png" %>
+  <% end %>
+  <%= link_to food_question_category_index_path do %>
+    <div class="card-category faq wrap faq3">
+      <div class= "d-flex flex-column">
+        <p>Food</p>
+        <%= cl_image_tag "food.png" %>
+      </div>
     </div>
-  </div>
-
-  <div class="card-category faq wrap faq4">
-    <a href="#"></a>
-    <div class= "d-flex flex-column">
-      <p>Taxi</p>
-      <%= cl_image_tag "taxi.png" %>
+  <% end %>
+  <%= link_to taxi_question_category_index_path do %>
+    <div class="card-category faq wrap faq4">
+      <div class= "d-flex flex-column">
+        <p>Taxi</p>
+        <%= cl_image_tag "taxi.png" %>
+      </div>
     </div>
-  </div>
+  <% end %>
+  <%= link_to doctor_question_category_index_path do %>
+    <div class="card-category faq wrap faq5">
+      <div class= "">
+        <p>Doctor</p>
+        <%= cl_image_tag "doctor.png", :width=>70, :height=>70 %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to cleaning_question_category_index_path do %>
+    <div class="card-category faq wrap faq6">
+      <div class= "">
+        <p>Cleaning</p>
+        <%= cl_image_tag "cleaning.png", :width=>70, :height=>70 %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to meet_question_category_index_path do %>
+    <div class="card-category faq wrap faq7">
+      <div class= "">
+        <p>Meet</p>
+        <%= cl_image_tag "meet.png", :width=>70, :height=>70 %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to speechrecognition_question_category_index_path do %>
+    <div class="card-category faq wrap faq8">
+      <div >
+        <p>Speech recognition</p>
+      </div>
+    </div>
+  <% end %>
 </div>
 

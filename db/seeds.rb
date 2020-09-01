@@ -71,20 +71,10 @@ breakfast = Meal.create(name: "salty", category: "breakfast", description: "Thes
 breakfast.photo.attach(io: file, filename: "breakfast.jpg", content_type: "image/jpg")
 breakfast.save!
 
-# file = URI.open("")
-# sucre = Meal.create(name: "sweet", day: , category: "breakfast", description: "A healthy breakfast sandwich begins with freshly-baked, good-quality bread. I love experimenting with different types of bread to include Muesli, honey whole wheat, French batard, Pugliese, and other offerings found at a local bread bakery. For today’s breakfast toast I chose a well-seeded bread that looks and tastes amazing." )
-# sucre.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
-# sucre.save!
-
 file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598616625/pancakes.jpg")
 pancakes = Meal.create(name: "pancakes", category: "breakfast", description: "No sweet pancakes here! (Save those for Sunday morning brunch.) These pancakes are great for weekday mornings when you need some fuel in the morning to get through the day without spiking blood sugar levels. This savory pancake recipe has onions and meat to fill you up and provide some good nutrition. And while it takes 45 minutes to make, you can do meal prep and make a large batch at once to save for weekday mornings by simply re-heating in minutes." )
 pancakes.photo.attach(io: file, filename: "pancakes.jpg", content_type: "image/jpg")
 pancakes.save!
-
-# file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598616733/toast.jpg")
-# toast = Meal.create(name: "toast" , day: "lunch", category: , description: "French toast is known for being a sweet recipe, as it usually has sweet syrups on it, powdered sugar, and fruity or chocolate-based toppings. Yet, this Parmesan French Toast has more pungent, savory flavors from the hard cheese and isn't sweet or fruity one bit. Plus, it's ready in nine minutes, which it's quick and tasty, so it's perfect for busy mornings. Add black pepper for spice." )
-# toast.photo.attach(io: file, filename: "toast.jpg", content_type: "image/jpg")
-# toast.save!
 
 file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598616837/salmon.jpg")
 salmon = Meal.create(name: "salmon", category: "lunch", description: "Heat control when cooking fish is notoriously difficult. Use the steam mode for perfectly tender and juicy results! Salmon is high in protein and low in fat, and with the addition of vitamin B-rich asparagus, is a great support to those building muscle." )
