@@ -26938,7 +26938,7 @@ exports.RestMessageAdapter = RestMessageAdapter;
 
 // Note: Replace the URL with a valid endpoint to retrieve
 //       authorization tokens for your subscription.
-var authorizationEndpoint = "token.php";
+var authorizationEndpoint = "https://francecentral.api.cognitive.microsoft.com/sts/v1.0/issuetoken";
 
 function RequestAuthorizationToken() {
   if (authorizationEndpoint) {
