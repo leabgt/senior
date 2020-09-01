@@ -26979,6 +26979,10 @@ const dispatch = (result) => {
     submitBtn.setAttribute("href", "/trips/new")
   } else if (text.includes("call")) {
     submitBtn.setAttribute("href", `/repertoires/${repertoireId}`)
+  } else if (text.includes("food")) {
+    submitBtn.setAttribute("href", `/meals`)
+  } else if (text.includes("help")) {
+    submitBtn.setAttribute("href", `/question_category`)
   } else {
     submitBtn.setAttribute("href", "/")
   };
