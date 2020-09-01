@@ -1,6 +1,8 @@
 class MealsController < ApplicationController
   def index
-    @meals = Meal.all
+    @breakfasts = Meal.where(category: "breakfast")
+    @lunches = Meal.where(category: "lunch")
+    @diners = Meal.where(category: "diner")
   end
 
   def show
