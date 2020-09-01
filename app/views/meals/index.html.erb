@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="home-cards">
+    <% @meals.each do |meal|%>
+      <h1><%= meal.name %></h1>
+      <h2><%= meal.category %></h2>
+      <h3><%= meal.description %></h3>
+    <% end %>
+    <h3><%= current_user.address %></h3>
+  </div>
+</div>
