@@ -1,10 +1,20 @@
 <div class="container">
-  <div class="home-cards">
+
+
+
+
     <% @meals.each do |meal|%>
-      <h1><%= meal.name %></h1>
-      <h2><%= meal.category %></h2>
-      <h3><%= meal.description %></h3>
+    <div class="cards-meals-index">
+      <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
+      <div class="meals-text">
+        <h1><%= meal.category %></h1>
+        <h2><%= meal.name %></h2>
+        <p><%= meal.description %></p>
+      </div>
+    </div>
     <% end %>
-    <h3><%= current_user.address %></h3>
-  </div>
+
+
+  <%= link_to "Back", root_path, class:"btn backbutton" %>
+
 </div>
