@@ -4,6 +4,9 @@ class MealsController < ApplicationController
     @meals = Meal.all
   end
 
+  def show
+  end
+
   def new
   end
 
