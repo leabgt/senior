@@ -1,0 +1,102 @@
+.h5clean{
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 35px;
+}
+
+
+.containerclean0{
+  margin-top: 100px;
+}
+
+.containerclean1{
+  justify-content: space-around;
+}
+
+.containerclean2{
+  justify-content: space-around;
+}
+
+.containerclean3{
+  justify-content: space-around;
+}
+
+.containerclean4{
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.btn-ghostclean1{
+  color: rgb(255, 255, 255);
+  border: 2px solid #ea9a96;
+  padding: 35px 60px;
+  border-radius: 15px;
+  opacity: 1;
+}
+
+.btn-ghostclean1:hover{
+  color:#0E0000;
+  background-color: #ea9a96;
+  border: 2px solid #0E0000;
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+.btn-ghostclean2 {
+  color: rgb(255, 255, 255);
+  border: 2px solid #ea9a96;
+  padding: 25px 40px;
+  border-radius: 15px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghostclean2:hover {
+  color:#0E0000;
+  background-color: #ea9a96;
+  border: 2px solid #0E0000;
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+#test {
+
+}
+
+.btncolorgreen {
+  background-color: #00bdaa;
+}
+
+.btncolorpink {
+  background-color: pink;
+}
+
+
+.btn-flatclean {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #00bdaa;
+  transition: background 0.3s ease;
+  border: 2px solid #ea9a96;
+  margin-bottom: 92px;
+}
+
+.btn-flatclean:hover {
+  background: #00bdaa;
+  color: #0E0000;
+  border: 2px solid #0E0000;
+}
