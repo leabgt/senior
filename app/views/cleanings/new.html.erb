@@ -1,0 +1,44 @@
+<div class="containerclean0"></div>
+
+
+
+<h5 class="h5clean">What service do you want ? (click on it)</h5>
+<div class="containerclean1  d-flex">
+  <button class="btn btn-ghostclean1 btncolorgreen" >Housework</button>
+  <button class="btn btn-ghostclean1 btncolorgreen" > Laundry </button>
+</div>
+<hr>
+<h5 class="h5clean">What day do you want? (click on it)</h5>
+<div class="containerclean2   d-flex">
+  <button class="btn btn-ghostclean2 btncolorgreen" > Monday </button>
+  <button class="btn btn-ghostclean2 btncolorgreen" > Tuesday</button>
+  <button class="btn btn-ghostclean2 btncolorgreen" >Wednesday</button>
+  <button class="btn btn-ghostclean2 btncolorgreen" > Thursday</button>
+  <button class="btn btn-ghostclean2 btncolorgreen" > Friday  </button>
+</div>
+<hr>
+<h5 class="h5clean">At what part of the day? (click on it)</h5>
+<div class="containerclean3  d-flex">
+  <button class="btn btn-ghostclean1 btncolorgreen" > Morning </button>
+  <button class="btn btn-ghostclean1 btncolorgreen" >Afternoon</button>
+</div>
+<hr>
+<h5 class="h5clean">If you have done, click on confirm.</h5>
+<div class="containerclean4 d-flex"><a class="btn btn-flatclean" >Confirm</a></div>
+
+
+
+
+<script>
+
+  const buttons = document.querySelectorAll(".btncolorgreen");
+
+  buttons.forEach(function (button) {
+
+    button.addEventListener("click", function(e) {
+       e.currentTarget.classList.toggle("btncolorgreen");
+       e.currentTarget.classList.toggle("btncolorpink");
+    });
+})
+
+</script>
