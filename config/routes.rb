@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :meals, only: [:index, :new, :create, :edit, :update, :show] do
-    resources :bookings, only: [:show]
+    resources :bookings, only: [:show, :new, :create]
   end
 
   resources :trips, only: [:new, :create, :edit, :update, :show]
