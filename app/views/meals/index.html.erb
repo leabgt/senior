@@ -42,7 +42,7 @@
 
 
     <div class="dinersmeals">
-      <h2>Diner</h2>
+      <h2>Dinner</h2>
       <% @diners.each do |meal|%>
         <div class="cards-meals-index">
           <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
@@ -55,5 +55,8 @@
     </div>
 
   </div>
-  <%= link_to "Back", root_path, class:"btn backbuttonmeal" %>
+  <div class="mealsbuttons">
+    <%= link_to "Back", root_path, class:"btn backbuttonmeal" %>
+    <%= link_to "Confirm", new_meal_path, class:"btn mealvalidation" %>
+  </div>
 </div>

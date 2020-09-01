@@ -72,7 +72,7 @@ breakfast.photo.attach(io: file, filename: "breakfast.jpg", content_type: "image
 breakfast.save!
 
 file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598616625/pancakes.jpg")
-pancakes = Meal.new(name: "pancakes", category: "breakfast", description: "No sweet pancakes here! These pancakes are great for weekday mornings when you need some fuel in the morning to get through the day without spiking blood sugar levels." )
+pancakes = Meal.new(name: "Pancakes", category: "breakfast", description: "No sweet pancakes here! These pancakes are great for weekday mornings when you need some fuel in the morning to get through the day without spiking blood sugar levels." )
 pancakes.photo.attach(io: file, filename: "pancakes.jpg", content_type: "image/jpg")
 pancakes.save!
 
