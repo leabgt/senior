@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :trips
   has_many :contacts
   has_many :meals
+  has_many :bookings
   has_one :repertoire
   has_one_attached :photo
 
