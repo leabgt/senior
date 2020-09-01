@@ -1,7 +1,18 @@
 <div class="container">
-  <% @meals.each do |meal|%>
-    <h1><%= meal.name %></h1>
-    <h2><%= meal.category %></h2>
-    <p><%= meal.description %></p>
-  <% end %>
+
+
+    <% @meals.each do |meal|%>
+    <div class="cards-meals-index">
+      <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
+      <div class="meals-text">
+        <h1><%= meal.category %></h1>
+        <h2><%= meal.name %></h2>
+        <p><%= meal.description %></p>
+      </div>
+    </div>
+    <% end %>
+
+
+  <%= link_to "Back", root_path, class:"btn backbutton" %>
+  
 </div>
