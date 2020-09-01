@@ -1,6 +1,7 @@
 .navbar-senior {
   justify-content: space-between;
   background: $my-pink;
+  font-size: 28px;
 }
 
 .navbar-senior .navbar-collapse {
@@ -18,11 +19,16 @@
   width: 100%;
   box-shadow: none;
   background-color: $white;
+  font-size: 28px;
+}
+.nav-item a {
+  margin-left: 20px;
 }
 
 .avatar {
-width: 40px;
-height: 40px;
+width: 55px;
+height: 55px;
+margin-left: 20px;
 }
 .navbar-light .navbar-nav .nav-link{
   color: $gray;

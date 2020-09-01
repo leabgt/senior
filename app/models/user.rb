@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :trips
   has_many :contacts
+  has_many :bookings
+  has_many :meals, through: :bookings
   has_one :repertoire
   has_one_attached :photo
 

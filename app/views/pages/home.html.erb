@@ -51,9 +51,6 @@
   </div>
 </div>
 
-
-
-
 <%= link_to "", root_path, id: "speechRecSubmitBtn", class:"d-none", data: { repertoire_id: @repertoire.id, turbolinks: "false" } %>
 
 <div class= "container homepage">
@@ -67,10 +64,10 @@
       <%= cl_image_tag "taxi.png", class: "service-card-icon"%>
       <p>Taxi</p>
     <% end %>
-    <div class="home-cards col-sm-4">
+    <%= link_to meals_path, class: "home-cards col-sm-4" do %>
       <%= cl_image_tag "food.png", class: "service-card-icon"%>
       <p>Food</p>
-    </div>
+    <% end %>
     <div class="home-cards col-sm-4">
       <%= cl_image_tag "doctor.png", class: "service-card-icon"%>
       <p>Doctor</p>

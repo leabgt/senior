@@ -26938,7 +26938,7 @@ exports.RestMessageAdapter = RestMessageAdapter;
 
 // Note: Replace the URL with a valid endpoint to retrieve
 //       authorization tokens for your subscription.
-var authorizationEndpoint = "token.php";
+var authorizationEndpoint = "https://francecentral.api.cognitive.microsoft.com/sts/v1.0/issueToken";
 
 function RequestAuthorizationToken() {
   if (authorizationEndpoint) {
@@ -26979,6 +26979,10 @@ const dispatch = (result) => {
     submitBtn.setAttribute("href", "/trips/new")
   } else if (text.includes("call")) {
     submitBtn.setAttribute("href", `/repertoires/${repertoireId}`)
+  } else if (text.includes("food")) {
+    submitBtn.setAttribute("href", `/meals`)
+  } else if (text.includes("help")) {
+    submitBtn.setAttribute("href", `/question_category`)
   } else {
     submitBtn.setAttribute("href", "/")
   };

@@ -1,20 +1,20 @@
 <div class="container">
-  <div class="taxi-top-block">
-    <%= cl_image_tag "GIF-MAMIE-COQUETTE.gif", class: "newtaxi-gif"%>
-    <h2>Your taxi trip</h2>
-    <%= cl_image_tag "GIF-PAPY-CHIC.gif", class: "newtaxi-gif"%>
-  </div>
-  <div class="d-flex justify-content-center">
-  <div class="trips-form">
-    <%= simple_form_for @trip do |f| %>
-
-      <div class="trips-form-details">
-        <%= f.input :arrival_address, label: 'Where do you want to go?' %>
-      </div>
+  <div class="newtrip">
+    <div class="taxi-top-block">
+      <%= cl_image_tag "GIF-MAMIE-COQUETTE.gif", class: "newtaxi-gif"%>
+      <h2>Your taxi trip</h2>
+      <%= cl_image_tag "GIF-PAPY-CHIC.gif", class: "newtaxi-gif"%>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="trips-form">
+        <%= simple_form_for @trip do |f| %>
+          <div class="trips-form-details">
+          <%= f.input :arrival_address, label: 'Where do you want to go?' %>
+          </div>
         <%= f.submit 'Réserver', class: "btn btn-trip-form", formtarget: '_blank'%>
       </div>
-
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+    <%= link_to "Back", root_path, class:"btn backbutton" %>
   </div>
 </div>
