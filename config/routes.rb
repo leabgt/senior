@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     resources :contacts, only: [:show]
   end
 
+  resources :meals, only: [:new, :create, :edit, :update, :show] do
+    resources :bookings, only: [:show]
+  end
+
   resources :trips, only: [:new, :create, :edit, :update, :show]
   resources :questions, only: [:index, :show]
 
