@@ -1,13 +1,13 @@
 <div class="container">
 
     <div class="weekdays" id="days">
-      <div class="days"><p>Monday</p></div>
-      <div class="days"><p>Tuesday</p></div>
-      <div class="days"><p>Wednesday</p></div>
-      <div class="days"><p>Thursday</p></div>
-      <div class="days"><p>Friday</p></div>
-      <div class="days"><p>Saturday</p></div>
-      <div class="days"><p>Sunday</p></div>
+      <div class="days"><%= link_to "Monday", meals_path(day: "Monday")%></div>
+      <div class="days"><%= link_to "Tuesday", meals_path(day: "Tuesday")%></div>
+      <div class="days"><%= link_to "Wednesday", meals_path(day: "Wedenesday")%></div>
+      <div class="days"><%= link_to "Thursday", meals_path(day: "Thursday")%></div>
+      <div class="days"><%= link_to "Friday", meals_path(day: "Friday")%></div>
+      <div class="days"><%= link_to "Saturday", meals_path(day: "Saturday")%></div>
+      <div class="days"><%= link_to "Sunday", meals_path(day: "Sunday")%></div>
     </div>
 
     <div class="mealsmenu">
@@ -15,7 +15,40 @@
 
       <div class="breakfastmeals">
         <h2>Breakfast</h2>
-        <% @breakfasts.each do |meal|%>
+        <% if @breakfasts %>
+          <% @breakfasts.each do |meal|%>
+            <div class="cards-meals-index" id="meals-<%= meal.id %>">
+              <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
+              <div class="meals-text">
+                <h3><%= meal.try(:name) %></h3>
+                <p><%= meal.description %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+
+      <div class="lunchmeals">
+        <h2>Lunch</h2>
+        <% if @lunches %>
+          <% @lunches.each do |meal|%>
+            <div class="cards-meals-index" id="meal-<%= meal.id %>">
+              <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
+              <div class="meals-text">
+                <h3><%= meal.name %></h3>
+                <p><%= meal.description %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+
+    <div class="dinersmeals">
+      <h2>Dinner</h2>
+      <% if @diners %>
+        <% @diners.each do |meal|%>
           <div class="cards-meals-index" id="meals-<%= meal.id %>">
             <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
             <div class="meals-text">
@@ -24,33 +57,6 @@
             </div>
           </div>
         <% end %>
-      </div>
-
-
-      <div class="lunchmeals">
-        <h2>Lunch</h2>
-        <% @lunches.each do |meal|%>
-          <div class="cards-meals-index" id="meal-<%= meal.id %>">
-            <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
-            <div class="meals-text">
-              <h3><%= meal.name %></h3>
-              <p><%= meal.description %></p>
-            </div>
-          </div>
-        <% end %>
-      </div>
-
-
-    <div class="dinersmeals">
-      <h2>Dinner</h2>
-      <% @diners.each do |meal|%>
-        <div class="cards-meals-index" id="meals-<%= meal.id %>">
-          <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
-          <div class="meals-text">
-            <h3><%= meal.name %></h3>
-            <p><%= meal.description %></p>
-          </div>
-        </div>
       <% end %>
     </div>
 
