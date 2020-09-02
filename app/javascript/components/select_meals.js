@@ -19,10 +19,14 @@ const mealscards = () => {
 }
 
 const mealsdays = () => {
+  const array = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
   const string = window.location.href;
   const day = string.split("=")[1];
-  const element = document.getElementById(day);
-  element.classList.add("days-selection");
+  console.log(array.includes(day))
+  if(array.includes(day)) {
+    const element = document.getElementById(day);
+    element.classList.add("days-selection");
+  }
 }
 
 export {mealscards, mealsdays}

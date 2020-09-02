@@ -26983,6 +26983,8 @@ const dispatch = (result) => {
     submitBtn.setAttribute("href", `/meals`)
   } else if (text.includes("help")) {
     submitBtn.setAttribute("href", `/question_category`)
+  } else if (text.includes("doctor")) {
+    submitBtn.setAttribute("href", `/doctors`)
   } else {
     submitBtn.setAttribute("href", "/")
   };
