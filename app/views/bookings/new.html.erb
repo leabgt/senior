@@ -7,28 +7,18 @@
     </div>
 
     <div class="row mealsBookingDetails">
-      <div class= "col-12 d-flex justify-content-around">
-        <h2>Breakfast</h2>
-        <h2>Lunch</h2>
-        <h2>Dinner</h2>
+      <% @meals.each do |meal| %>
+      <div class="col-12">
+        <h3><%= meal[0].category %></h3>
       </div>
-
-      <div class="mealsBookingContent">
-        <div class="col-12">
-          <h2>Monday</h2>
-            <h3>Salmon</h3>
-            <p>Description</p>
-            <h3>Boeuf</h3>
-            <p>Description</p>
-        </div>
-        <div class="col-12">
-          <h2>Wednesday</h2>
-            <h3>Salmon</h3>
-            <p>Description</p>
-            <h3>Boeuf</h3>
-            <p>Description</p>
+      <div class="mealsBookingCard">
+        <%= cl_image_tag meal[0].photo.key, class: "mealsBookingCardPhoto" %>
+        <div class="mealsBookingCardText">
+          <h3><%= meal[0].name %></h3>
+          <p><%= meal[0].description %></p>
         </div>
       </div>
+      <% end %>
     </div>
 
     <div class="btnBookingsMeals">
