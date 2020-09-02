@@ -12,7 +12,6 @@ const mealscards = () => {
     const mealsid = item.id.split("-");
     link.href += `meal${i}=${mealsid[1]}&`;
     i += 1;
-    console.log(link)
   });
 });
 }
@@ -23,8 +22,9 @@ const mealsdays = () => {
   const days = document.getElementById("days");
   Array.from(days.children).forEach((item) => {
     item.addEventListener("click", (event) => {
-      console.dir(item);
       item.classList.toggle("days-selection");
+      const daysindex = item.innerText;
+      link.href += ``;
     });
   });
 }

@@ -5,7 +5,7 @@ class CreateMeals < ActiveRecord::Migration[6.0]
       t.text :description
       t.references :user, null: false, foreign_key: true
       t.string :category
-      t.date :day
+      t.string :day
 
       t.timestamps
     end
