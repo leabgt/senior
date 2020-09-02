@@ -25,7 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import "../plugins/flatpickr"
-import {mealscards} from "../components/select_meals"
+import {mealscards, mealsdays} from "../components/select_meals"
 
 // Internal imports, e.g:
 import { initVideoCall } from '../components/init_videocall'
@@ -36,6 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initVideoCall();
   mealscards();
+  mealsdays();
 });
 
 import { initSweetalert } from '../plugins/init_sweetalert';

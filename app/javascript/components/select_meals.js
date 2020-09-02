@@ -3,18 +3,29 @@
 // pour chaque element de l'array on ajoute l'eventlistener au click
 
 const mealscards = () => {
+  const link = document.getElementById("mealvalidation");
+  link.href += "?";
+  let i = 1;
   document.querySelectorAll(".cards-meals-index").forEach((item) => {
   item.addEventListener("click", (event) => {
     item.classList.toggle("cards-circle");
-    console.dir(item)
-    const mealsid = item.id.split("-")
-    console.log(mealsid[1])
+    const mealsid = item.id.split("-");
+    link.href += `meal${i}=${mealsid[1]}&`;
+    i += 1;
+    console.log(link)
   });
 });
 }
-export {mealscards}
-
-// recuperer le numero de l'id de la carte
 
 
-// Ajouter cet id a notre link_to
+
+const mealsdays = () => {
+  const days = document.getElementById("days");
+  Array.from(days.children).forEach((item) => {
+    item.addEventListener("click", (event) => {
+      console.dir(item);
+      item.classList.toggle("days-selection");
+    });
+  });
+}
+export {mealscards, mealsdays}
