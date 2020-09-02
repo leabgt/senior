@@ -6,19 +6,59 @@
       <h1>Order summary</h1>
     </div>
 
-    <div class="row mealsBookingDetails">
-      <% @meals.each do |meal| %>
-      <div class="col-12">
-        <h3><%= meal[0].category %></h3>
+    <div class="mealsBookingDetails d-flex">
+
+    <div class="breakfastBooking">
+      <% if !@breakfasts.empty? %>
+      <div class="mealsBookingCategory">
+        <h3>Breakfast</h3>
       </div>
-      <div class="mealsBookingCard">
-        <%= cl_image_tag meal[0].photo.key, class: "mealsBookingCardPhoto" %>
-        <div class="mealsBookingCardText">
-          <h3><%= meal[0].name %></h3>
-          <p><%= meal[0].description %></p>
+        <% @breakfasts.each do |breakfast| %>
+        <div class="mealsBookingCard">
+          <%= cl_image_tag breakfast.photo.key, class: "mealsBookingCardPhoto" %>
+          <div class="mealsBookingCardText">
+          <h3><%= breakfast.name %></h3>
+          <p><%= breakfast.description %></p>
+          </div>
         </div>
-      </div>
+        <% end %>
       <% end %>
+    </div>
+
+    <div class="lunchBooking">
+      <% if !@lunches.empty? %>
+      <div class="mealsBookingCategory">
+        <h3>Lunch</h3>
+      </div>
+        <% @lunches.each do |lunch| %>
+        <div class="mealsBookingCard">
+          <%= cl_image_tag lunch.photo.key, class: "mealsBookingCardPhoto" %>
+          <div class="mealsBookingCardText">
+          <h3><%= lunch.name %></h3>
+          <p><%= lunch.description %></p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="dinerBooking">
+      <% if !@diners.empty? %>
+      <div class="mealsBookingCategory">
+        <h3>Diner</h3>
+      </div>
+        <% @diners.each do |diner| %>
+        <div class="mealsBookingCard">
+          <%= cl_image_tag diner.photo.key, class: "mealsBookingCardPhoto" %>
+          <div class="mealsBookingCardText">
+          <h3><%= diner.name %></h3>
+          <p><%= diner.description %></p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
     </div>
 
     <div class="btnBookingsMeals">
