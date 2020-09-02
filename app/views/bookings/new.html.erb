@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class="mealsBooking">
+
+    <div>
+      <h1>Order summary</h1>
+    </div>
+
+    <div class="row mealsBookingDetails">
+      <% @meals.each do |meal| %>
+      <div class="col-12">
+        <h3><%= meal[0].category %></h3>
+      </div>
+      <div class="mealsBookingCard">
+        <%= cl_image_tag meal[0].photo.key, class: "mealsBookingCardPhoto" %>
+        <div class="mealsBookingCardText">
+          <h3><%= meal[0].name %></h3>
+          <p><%= meal[0].description %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="btnBookingsMeals">
+      <%= link_to "Edit", meals_path ,class: "btn bookingBtn" %>
+      <button id="sweet-alert-demo" class="btn bookingBtn">Confirm</button>
+    </div>
+
+  </div>
+
+</div>

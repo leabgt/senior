@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import "../plugins/flatpickr"
+import { mealscards } from "../components/select_meals"
 
 // Internal imports, e.g:
 import { initVideoCall } from '../components/init_videocall'
@@ -35,13 +36,14 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initVideoCall();
+  mealscards();
 });
 
 import { initSweetalert } from '../plugins/init_sweetalert';
 
 initSweetalert('#sweet-alert-demo', {
   icon: "https://res.cloudinary.com/dyrbktlhi/image/upload/v1598363920/logo.png",
-  text: "Your course is confirmed",
+  text: "Your order is confirmed",
   button: "OK",
 });
 

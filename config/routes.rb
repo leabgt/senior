@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :trips, only: [:new, :create, :edit, :update, :show]
   resources :questions, only: [:index, :show]
   resources :cleanings, only: [:new, :create]
+  resources :doctors, only: [:index, :show]
 
   resources :question_category, only: [:index] do
     collection do

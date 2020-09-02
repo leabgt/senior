@@ -1,13 +1,24 @@
 class BookingsController < ApplicationController
 
   def show
-    @booking = Booking.find(params[:id])
-    @meal = Meal.find(params[:meal_id])
+    # @booking = Booking.find(params[:id])
+    # @meal = Meal.find(params[:meal_id])
   end
 
   def new
-    @meal = Meal.find(params[:meal_id])
-    @booking = Booking.new
+    continue = true
+    i = 1
+    @meals = []
+    while continue
+      if params["meal#{i}"]
+        @meals << [Meal.find(params["meal#{i}"]), "mardi"]
+        i += 1
+      else
+        break
+      end
+    end
+
+
   end
 
   def create
