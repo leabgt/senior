@@ -14,6 +14,7 @@ Contact.destroy_all
 Repertoire.destroy_all
 User.destroy_all
 Meal.destroy_all
+Doctor.destroy_all
 
 puts "destroy all"
 
@@ -105,7 +106,6 @@ file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598618695/f
 fish = Meal.new(day: "Monday", name: "Fish", category: "diner", description: "Cod vegetables: Cod is the common name for the demersal fish genus Gadus, belonging to the family Gadidae." )
 fish.photo.attach(io: file, filename: "fish.jpg", content_type: "image/jpg")
 fish.save!
-
 
 file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598622787/breakfast.jpg")
 breakfast = Meal.new(day: "Tuesday", name: "Salty", category: "breakfast", description: "These are the ingredients you’ll need for this healthy breakfast sandwich." )
@@ -227,6 +227,7 @@ fish = Meal.new(day: "Saturday", name: "Fish", category: "diner", description: "
 fish.photo.attach(io: file, filename: "fish.jpg", content_type: "image/jpg")
 fish.save!
 
+
 file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598622787/breakfast.jpg")
 breakfast = Meal.new(day: "Wednesday", name: "Salty", category: "breakfast", description: "These are the ingredients you’ll need for this healthy breakfast sandwich." )
 breakfast.photo.attach(io: file, filename: "breakfast.jpg", content_type: "image/jpg")
@@ -346,4 +347,14 @@ file = URI.open("https://res.cloudinary.com/dyrbktlhi/image/upload/v1598618695/f
 fish = Meal.new(day: "Friday", name: "Fish", category: "diner", description: "Cod vegetables: Cod is the common name for the demersal fish genus Gadus, belonging to the family Gadidae." )
 fish.photo.attach(io: file, filename: "fish.jpg", content_type: "image/jpg")
 fish.save!
+
+
+puts "creating doctors"
+
+doctor1 = Doctor.create(name: "Professor Margaret Johnson", specialty: "Pulmonologist", video_link: "https://senior.daily.co/Johnson")
+doctor2 = Doctor.create(name: "Professor Nicholas Peters", specialty: "Cardiologist", video_link: "https://senior.daily.co/Peters")
+doctor2 = Doctor.create(name: "Mr Vik Sharma", specialty: "Ophthalmologist", video_link: "https://senior.daily.co/Sharma")
+doctor2 = Doctor.create(name: "Dr Antimos Ouzounoglou", specialty: "Dentist", video_link: "https://senior.daily.co/Ouzounoglou")
+
+
 puts "created"

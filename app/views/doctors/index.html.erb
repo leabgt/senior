@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="repertoire-show">
+    <div class="repertoire-top-block">
+    <%= cl_image_tag "super-mamie.gif", class: "repertoire-gif"%>
+    <h2>Your doctors</h2>
+    <%= cl_image_tag "super-papy.gif", class: "repertoire-gif"%>
+    </div>
+    <% @doctor.each do |doctor|%>
+      <div class="card-contact">
+          <div class="contact-infos">
+
+            <div class="contact-text">
+              <h2> <%= doctor.name %> </h2>
+              <h3 class="contact-infos"> <%= doctor.specialty %> </h3>
+            </div>
+          </div>
+
+          <div class= "contact-card-icon">
+            <%= link_to doctor.video_link do %>
+              <%= cl_image_tag "call.png" %>
+            <% end %>
+          </div>
+      </div>
+    <% end %>
+    <%= link_to "Back", root_path, class:"btn backbutton" %>
+  </div>
+ </div>
