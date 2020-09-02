@@ -1,21 +1,20 @@
 <div class="container">
 
     <div class="weekdays" id="days">
-      <div class="days"><%= link_to "Monday", meals_path(day: "Monday")%></div>
-      <div class="days"><%= link_to "Tuesday", meals_path(day: "Tuesday")%></div>
-      <div class="days"><%= link_to "Wednesday", meals_path(day: "Wednesday")%></div>
-      <div class="days"><%= link_to "Thursday", meals_path(day: "Thursday")%></div>
-      <div class="days"><%= link_to "Friday", meals_path(day: "Friday")%></div>
-      <div class="days"><%= link_to "Saturday", meals_path(day: "Saturday")%></div>
-      <div class="days"><%= link_to "Sunday", meals_path(day: "Sunday")%></div>
+      <div class="daysname" id="Monday"><%= link_to "Monday", meals_path(day: "Monday")%></div>
+      <div class="daysname" id="Tuesday"><%= link_to "Tuesday", meals_path(day: "Tuesday")%></div>
+      <div class="daysname" id="Wednesday"><%= link_to "Wednesday", meals_path(day: "Wednesday")%></div>
+      <div class="daysname" id="Thursday"><%= link_to "Thursday", meals_path(day: "Thursday")%></div>
+      <div class="daysname" id="Friday"><%= link_to "Friday", meals_path(day: "Friday")%></div>
+      <div class="daysname" id="Saturday"><%= link_to "Saturday", meals_path(day: "Saturday")%></div>
+      <div class="daysname" id="Sunday"><%= link_to "Sunday", meals_path(day: "Sunday")%></div>
     </div>
 
     <div class="mealsmenu">
 
-
       <div class="breakfastmeals">
-        <h2>Breakfast</h2>
         <% if @breakfasts %>
+          <h2>Breakfast</h2>
           <% @breakfasts.each do |meal|%>
             <div class="cards-meals-index" id="meals-<%= meal.id %>">
               <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
@@ -30,8 +29,8 @@
 
 
       <div class="lunchmeals">
-        <h2>Lunch</h2>
         <% if @lunches %>
+        <h2>Lunch</h2>
           <% @lunches.each do |meal|%>
             <div class="cards-meals-index" id="meal-<%= meal.id %>">
               <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
@@ -46,8 +45,8 @@
 
 
     <div class="dinersmeals">
-      <h2>Dinner</h2>
       <% if @diners %>
+      <h2>Dinner</h2>
         <% @diners.each do |meal|%>
           <div class="cards-meals-index" id="meals-<%= meal.id %>">
             <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
