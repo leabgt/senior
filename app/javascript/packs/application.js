@@ -38,6 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   initVideoCall();
   mealscards();
   mealsdays();
+
 });
 
 import { initSweetalert } from '../plugins/init_sweetalert';
