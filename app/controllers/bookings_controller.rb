@@ -8,10 +8,14 @@ class BookingsController < ApplicationController
   def new
     continue = true
     i = 1
-    @meals = []
+    @breakfasts = []
+    @lunches = []
+    @diners = []
     while continue
       if params["meal#{i}"]
-        @meals << [Meal.find(params["meal#{i}"]), "mardi"]
+        @breakfasts << Meal.find_by(id: params["meal#{i}"], category: "breakfast")
+        @lunches << Meal.find_by(id: params["meal#{i}"], category: "lunch")
+        @diners << Meal.find_by(id: params["meal#{i}"], category: "diner")
         i += 1
       else
         break

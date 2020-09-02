@@ -6,19 +6,35 @@
       <h1>Order summary</h1>
     </div>
 
-    <div class="row mealsBookingDetails">
-      <% @meals.each do |meal| %>
-      <div class="col-12">
-        <h3><%= meal[0].category %></h3>
-      </div>
-      <div class="col-12 mealsBookingCard">
-        <%= cl_image_tag meal[0].photo.key, class: "mealsBookingCardPhoto" %>
-        <div class="mealsBookingCardText">
-          <h3><%= meal[0].name %></h3>
-          <p><%= meal[0].description %></p>
-        </div>
-      </div>
+    <div class="mealsBookingDetails">
+
+      <% if !@breakfasts.empty? %>
+        <h3>Breakfast</h3>
+        <% @breakfasts.each do |breakfast| %>
+          <%= cl_image_tag breakfast.photo.key, class: "mealsBookingCardPhoto" %>
+          <h3><%= breakfast.name %></h3>
+          <p><%= breakfast.description %></p>
+        <% end %>
       <% end %>
+
+      <% if !@lunches.empty? %>
+        <h3>Lunch</h3>
+        <% @lunches.each do |lunch| %>
+          <%= cl_image_tag lunch.photo.key, class: "mealsBookingCardPhoto" %>
+          <h3><%= lunch.name %></h3>
+          <p><%= lunch.description %></p>
+        <% end %>
+      <% end %>
+
+      <% if !@diners.empty? %>
+        <h3>Diner</h3>
+        <% @diners.each do |diner| %>
+          <%= cl_image_tag diner.photo.key, class: "mealsBookingCardPhoto" %>
+          <h3><%= diner.name %></h3>
+          <p><%= diner.description %></p>
+        <% end %>
+      <% end %>
+
     </div>
 
     <div class="btnBookingsMeals">
