@@ -14,6 +14,7 @@ Contact.destroy_all
 Repertoire.destroy_all
 User.destroy_all
 Meal.destroy_all
+Doctor.destroy_all
 
 puts "destroy all"
 
@@ -106,6 +107,13 @@ fish = Meal.new(name: "Fish", category: "diner", description: "Cod vegetables: C
 fish.photo.attach(io: file, filename: "fish.jpg", content_type: "image/jpg")
 fish.save!
 
+
+puts "creating doctors"
+
+doctor1 = Doctor.create(name: "Professor Margaret Johnson", specialty: "Pulmonologist", video_link: "https://senior.daily.co/Johnson")
+doctor2 = Doctor.create(name: "Professor Nicholas Peters", specialty: "Cardiologist", video_link: "https://senior.daily.co/Peters")
+doctor2 = Doctor.create(name: "Mr Vik Sharma", specialty: "Ophthalmologist", video_link: "https://senior.daily.co/Sharma")
+doctor2 = Doctor.create(name: "Dr Antimos Ouzounoglou", specialty: "Dentist", video_link: "https://senior.daily.co/Ouzounoglou")
 
 
 puts "created"

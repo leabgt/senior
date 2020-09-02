@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2020_08_28_124708) do
+ActiveRecord::Schema.define(version: 2020_09_02_091821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,14 +36,6 @@ ActiveRecord::Schema.define(version: 2020_08_28_124708) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-
-  create_table "cleanings", force: :cascade do |t|
-    t.string "services"
-    t.string "day"
-    t.string "moment"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-
   create_table "bookings", force: :cascade do |t|
     t.integer "progress"
     t.bigint "user_id", null: false
@@ -53,7 +44,14 @@ ActiveRecord::Schema.define(version: 2020_08_28_124708) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["meal_id"], name: "index_bookings_on_meal_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
+  create_table "cleanings", force: :cascade do |t|
+    t.string "services"
+    t.string "day"
+    t.string "moment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -64,6 +62,14 @@ ActiveRecord::Schema.define(version: 2020_08_28_124708) do
     t.string "video_link"
     t.index ["repertoire_id"], name: "index_contacts_on_repertoire_id"
     t.index ["user_id"], name: "index_contacts_on_user_id"
+  end
+
+  create_table "doctors", force: :cascade do |t|
+    t.string "name"
+    t.string "specialty"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "video_link"
   end
 
   create_table "meals", force: :cascade do |t|
