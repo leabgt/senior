@@ -13,9 +13,9 @@ class BookingsController < ApplicationController
     @diners = []
     while continue
       if params["meal#{i}"]
-        @breakfasts << Meal.find_by(id: params["meal#{i}"], category: "breakfast")
-        @lunches << Meal.find_by(id: params["meal#{i}"], category: "lunch")
-        @diners << Meal.find_by(id: params["meal#{i}"], category: "diner")
+        @breakfasts << Meal.find_by(id: params["meal#{i}"], category: "breakfast") if !Meal.find_by(id: params["meal#{i}"], category: "breakfast").nil?
+        @lunches << Meal.find_by(id: params["meal#{i}"], category: "lunch") if !Meal.find_by(id: params["meal#{i}"], category: "lunch").nil?
+        @diners << Meal.find_by(id: params["meal#{i}"], category: "diner") if !Meal.find_by(id: params["meal#{i}"], category: "diner").nil?
         i += 1
       else
         break
