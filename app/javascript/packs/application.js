@@ -31,6 +31,7 @@ import { mealscards, mealsdays } from "../components/select_meals"
 import { initVideoCall } from '../components/init_videocall'
 
 // import { initSelect2 } from '../components/init_select2';
+  import { initSweetalert } from '../plugins/init_sweetalert';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -39,15 +40,15 @@ document.addEventListener('turbolinks:load', () => {
   mealscards();
   mealsdays();
 
+  initSweetalert('#sweet-alert-demo', {
+    icon: "https://res.cloudinary.com/dyrbktlhi/image/upload/v1598363920/logo.png",
+    text: "Your order is confirmed",
+    button: "OK"
+  })
+
 });
 
-import { initSweetalert } from '../plugins/init_sweetalert';
 
-initSweetalert('#sweet-alert-demo', {
-  icon: "https://res.cloudinary.com/dyrbktlhi/image/upload/v1598363920/logo.png",
-  text: "Your order is confirmed",
-  button: "OK"
-})
 
 
 
