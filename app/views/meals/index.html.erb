@@ -26,7 +26,6 @@
             <% end %>
           <% end %>
         </div>
-      </div>
 
 
       <div class="lunchmeals">
@@ -45,19 +44,20 @@
       </div>
 
 
-    <div class="dinersmeals">
-      <% if @diners %>
-      <h2>Dinner</h2>
-        <% @diners.each do |meal|%>
-          <div class="cards-meals-index" id="meals-<%= meal.id %>">
-            <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
-            <div class="meals-text">
-              <h3><%= meal.name %></h3>
-              <p><%= meal.description %></p>
+      <div class="dinersmeals">
+        <% if @diners %>
+        <h2>Dinner</h2>
+          <% @diners.each do |meal|%>
+            <div class="cards-meals-index" id="meals-<%= meal.id %>">
+              <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
+              <div class="meals-text">
+                <h3><%= meal.name %></h3>
+                <p><%= meal.description %></p>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
 
     <div class="mealsbuttons">
