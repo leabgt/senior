@@ -4,16 +4,18 @@
 
 const mealscards = () => {
   const link = document.getElementById("mealvalidation");
-  link.href += "?";
-  let i = 1;
-  document.querySelectorAll(".cards-meals-index").forEach((item) => {
-    item.addEventListener("click", (event) => {
-      item.classList.toggle("cards-circle");
-      const mealsid = item.id.split("-");
-      link.href += `meal${i}=${mealsid[1]}&`;
-      i += 1;
+  if(link) {
+    link.href += "?";
+    let i = 1;
+    document.querySelectorAll(".cards-meals-index").forEach((item) => {
+      item.addEventListener("click", (event) => {
+        item.classList.toggle("cards-circle");
+        const mealsid = item.id.split("-");
+        link.href += `meal${i}=${mealsid[1]}&`;
+        i += 1;
+      });
     });
-  });
+  }
 }
 
 
@@ -28,4 +30,4 @@ const mealscards = () => {
 //     });
 //   });
 // }
-// export {mealscards, mealsdays}
+export {mealscards}
