@@ -18,16 +18,11 @@ const mealscards = () => {
   }
 }
 
+const mealsdays = () => {
+  const string = window.location.href;
+  const day = string.split("=")[1];
+  const element = document.getElementById(day);
+  element.classList.add("days-selection");
+}
 
-
-// const mealsdays = () => {
-//   const days = document.getElementById("days");
-//   Array.from(days.children).forEach((item) => {
-//     item.addEventListener("click", (event) => {
-//       item.classList.toggle("days-selection");
-//       const daysindex = item.innerText;
-//       link.href += `day=`;
-//     });
-//   });
-// }
-export {mealscards}
+export {mealscards, mealsdays}
