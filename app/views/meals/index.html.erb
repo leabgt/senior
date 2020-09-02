@@ -1,13 +1,13 @@
 <div class="container">
 
-    <div class="weekdays">
-      <p>Monday</p>
-      <p>Tuesday</p>
-      <p>Wednesday</p>
-      <p>Thursday</p>
-      <p>Friday</p>
-      <p>Saturday</p>
-      <p>Sunday</p>
+    <div class="weekdays" id="days">
+      <div class="Monday"><p>Monday</p></div>
+      <div class="Tuesday"><p>Tuesday</p></div>
+      <div class="Wednesday"><p>Wednesday</p></div>
+      <div class="Thursday"><p>Thursday</p></div>
+      <div class="Friday"><p>Friday</p></div>
+      <div class="Saturday"><p>Saturday</p></div>
+      <div class="Sunday"><p>Sunday</p></div>
     </div>
 
     <div class="mealsmenu">
@@ -16,7 +16,7 @@
       <div class="breakfastmeals">
         <h2>Breakfast</h2>
         <% @breakfasts.each do |meal|%>
-          <div class="cards-meals-index">
+          <div class="cards-meals-index" id="meals-<%= meal.id %>">
             <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
             <div class="meals-text">
               <h3><%= meal.name %></h3>
@@ -30,7 +30,7 @@
       <div class="lunchmeals">
         <h2>Lunch</h2>
         <% @lunches.each do |meal|%>
-          <div class="cards-meals-index">
+          <div class="cards-meals-index" id="meal-<%= meal.id %>">
             <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
             <div class="meals-text">
               <h3><%= meal.name %></h3>
@@ -44,7 +44,7 @@
     <div class="dinersmeals">
       <h2>Dinner</h2>
       <% @diners.each do |meal|%>
-        <div class="cards-meals-index">
+        <div class="cards-meals-index" id="meals-<%= meal.id %>">
           <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
           <div class="meals-text">
             <h3><%= meal.name %></h3>
@@ -57,6 +57,6 @@
   </div>
   <div class="mealsbuttons">
     <%= link_to "Back", root_path, class:"btn backbuttonmeal" %>
-    <%= link_to "Confirm", new_meal_path, class:"btn mealvalidation" %>
+    <%= link_to "Confirm", new_meal_booking_path(meal_id: 1), class:"btn mealvalidation", id: "mealvalidation" %>
   </div>
 </div>
