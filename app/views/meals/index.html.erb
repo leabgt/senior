@@ -13,7 +13,8 @@
 
     <div class="mealsmenu">
       <div class="breakfastmeals">
-          <% if @breakfasts %>
+
+          <% if @breakfasts.present? %>
             <h2>Breakfast</h2>
             <% @breakfasts.each do |meal|%>
               <div class="cards-meals-index" id="meals-<%= meal.id %>">
@@ -29,7 +30,7 @@
 
 
       <div class="lunchmeals">
-        <% if @lunches %>
+        <% if @lunches.present? %>
         <h2>Lunch</h2>
           <% @lunches.each do |meal|%>
             <div class="cards-meals-index" id="meal-<%= meal.id %>">
@@ -45,7 +46,7 @@
 
 
       <div class="dinersmeals">
-        <% if @diners %>
+        <% if @diners.present? %>
         <h2>Dinner</h2>
           <% @diners.each do |meal|%>
             <div class="cards-meals-index" id="meals-<%= meal.id %>">
