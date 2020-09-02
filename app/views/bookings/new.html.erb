@@ -1,11 +1,41 @@
 <div class="container">
-  <div class="row mealsBooking">
-    <div class="col-12">
-      <h1>Booking Recap</h1>
+
+  <div class="mealsBooking">
+
+    <div>
+      <h1>Order summary</h1>
     </div>
-    <div class="col-12 btnBookingsMeals">
+
+    <div class="row mealsBookingDetails">
+      <div class= "col-12 d-flex justify-content-around">
+        <h2>Breakfast</h2>
+        <h2>Lunch</h2>
+        <h2>Dinner</h2>
+      </div>
+
+      <div class="mealsBookingContent">
+        <div class="col-12">
+          <h2>Monday</h2>
+            <h3>Salmon</h3>
+            <p>Description</p>
+            <h3>Boeuf</h3>
+            <p>Description</p>
+        </div>
+        <div class="col-12">
+          <h2>Wednesday</h2>
+            <h3>Salmon</h3>
+            <p>Description</p>
+            <h3>Boeuf</h3>
+            <p>Description</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="btnBookingsMeals">
       <%= link_to "Edit", meals_path ,class: "btn bookingBtn" %>
       <button id="sweet-alert-demo" class="btn bookingBtn">Confirm</button>
     </div>
+
   </div>
+
 </div>
