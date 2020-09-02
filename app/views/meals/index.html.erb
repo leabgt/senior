@@ -1,5 +1,6 @@
 <div class="container">
-
+  <div class="titledetails">
+    <h1>When do you need a meal for?</h1>
     <div class="weekdays" id="days">
       <div class="daysname" id="Monday"><%= link_to "Monday", meals_path(day: "Monday")%></div>
       <div class="daysname" id="Tuesday"><%= link_to "Tuesday", meals_path(day: "Tuesday")%></div>
@@ -11,20 +12,20 @@
     </div>
 
     <div class="mealsmenu">
-
       <div class="breakfastmeals">
-        <% if @breakfasts %>
-          <h2>Breakfast</h2>
-          <% @breakfasts.each do |meal|%>
-            <div class="cards-meals-index" id="meals-<%= meal.id %>">
-              <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
-              <div class="meals-text">
-                <h3><%= meal.try(:name) %></h3>
-                <p><%= meal.description %></p>
+          <% if @breakfasts %>
+            <h2>Breakfast</h2>
+            <% @breakfasts.each do |meal|%>
+              <div class="cards-meals-index" id="meals-<%= meal.id %>">
+                <%= cl_image_tag meal.photo.key, class:"mealscardsphoto" %>
+                <div class="meals-text">
+                  <h3><%= meal.try(:name) %></h3>
+                  <p><%= meal.description %></p>
+                </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
 
 
@@ -59,9 +60,9 @@
       <% end %>
     </div>
 
-  </div>
-  <div class="mealsbuttons">
-    <%= link_to "Back", root_path, class:"btn backbuttonmeal" %>
-    <%= link_to "Confirm", new_meal_booking_path(meal_id: 1), class:"btn mealvalidation", id: "mealvalidation" %>
+    <div class="mealsbuttons">
+      <%= link_to "Back", root_path, class:"btn backbuttonmeal" %>
+      <%= link_to "Confirm", new_meal_booking_path(meal_id: 1), class:"btn mealvalidation", id: "mealvalidation" %>
+    </div>
   </div>
 </div>
