@@ -6,10 +6,11 @@
       <h1>Order summary</h1>
     </div>
 
+    <div class="text-center pt-5 pb-3" style="color: #ea9a96;">
+      <h2><%= @breakfasts&.first&.day %></h2>
+    </div>
+
     <div class="mealsBookingDetails d-flex">
-      <div class="d-flex align-items-center">
-        <h6><%= @breakfasts.first.day %></h6>
-      </div>
 
     <div class="breakfastBooking">
       <% if !@breakfasts.empty? %>
