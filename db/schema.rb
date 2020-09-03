@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_155500) do
+
+ActiveRecord::Schema.define(version: 2020_09_02_091821) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,11 +66,19 @@ ActiveRecord::Schema.define(version: 2020_08_31_155500) do
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
+  create_table "doctors", force: :cascade do |t|
+    t.string "name"
+    t.string "specialty"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "video_link"
+  end
+
   create_table "meals", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "category"
-    t.date "day"
+    t.string "day"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

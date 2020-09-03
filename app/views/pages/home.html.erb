@@ -68,10 +68,10 @@
       <%= cl_image_tag "food.png", class: "service-card-icon"%>
       <p>Food</p>
     <% end %>
-    <div class="home-cards col-sm-4">
+    <%= link_to doctors_path, class: "home-cards col-sm-4" do %>
       <%= cl_image_tag "doctor.png", class: "service-card-icon"%>
       <p>Doctor</p>
-    </div>
+    <%end %>
     <div class="home-cards col-sm-4">
       <%= cl_image_tag "cleaning.png", class: "service-card-icon"%>
       <p>Cleaning</p>

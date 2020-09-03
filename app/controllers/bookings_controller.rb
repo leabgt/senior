@@ -1,13 +1,28 @@
 class BookingsController < ApplicationController
 
   def show
-    @booking = Booking.find(params[:id])
-    @meal = Meal.find(params[:meal_id])
+    # @booking = Booking.find(params[:id])
+    # @meal = Meal.find(params[:meal_id])
   end
 
   def new
-    @meal = Meal.find(params[:meal_id])
-    @booking = Booking.new
+    continue = true
+    i = 1
+    @breakfasts = []
+    @lunches = []
+    @diners = []
+    while continue
+      if params["meal#{i}"]
+        @breakfasts << Meal.find_by(id: params["meal#{i}"], category: "breakfast") if !Meal.find_by(id: params["meal#{i}"], category: "breakfast").nil?
+        @lunches << Meal.find_by(id: params["meal#{i}"], category: "lunch") if !Meal.find_by(id: params["meal#{i}"], category: "lunch").nil?
+        @diners << Meal.find_by(id: params["meal#{i}"], category: "diner") if !Meal.find_by(id: params["meal#{i}"], category: "diner").nil?
+        i += 1
+      else
+        break
+      end
+    end
+
+
   end
 
   def create

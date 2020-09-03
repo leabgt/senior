@@ -1,8 +1,10 @@
 class MealsController < ApplicationController
   def index
-    @breakfasts = Meal.where(category: "breakfast")
-    @lunches = Meal.where(category: "lunch")
-    @diners = Meal.where(category: "diner")
+    if params[:day].present?
+      @breakfasts = Meal.where(category: "breakfast", day: params[:day])
+      @lunches = Meal.where(category: "lunch", day: params[:day])
+      @diners = Meal.where(category: "diner", day: params[:day])
+    end
   end
 
   def show
