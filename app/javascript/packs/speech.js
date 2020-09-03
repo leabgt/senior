@@ -26999,7 +26999,8 @@ document.addEventListener("turbolinks:load", function () {
   serviceRegion = document.getElementById("serviceRegion");
   phraseDiv = document.getElementById("phraseDiv");
 
-  startRecognizeOnceAsyncButton.addEventListener("click", function () {
+  if (startRecognizeOnceAsyncButton) {
+    startRecognizeOnceAsyncButton.addEventListener("click", function () {
     startRecognizeOnceAsyncButton.disabled = true;
     phraseDiv.innerHTML = "";
 
@@ -27040,6 +27041,7 @@ document.addEventListener("turbolinks:load", function () {
         recognizer = undefined;
       });
   });
+  }
 
   if (!!window.SpeechSDK) {
     SpeechSDK = window.SpeechSDK;
